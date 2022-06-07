@@ -54,6 +54,7 @@ class PostDetail(View):
             comment.save()
         else:
             comment_form = CommentForm()
+            messages.error(request, "Your comment does not meet standard please retry")
         
         return render(
             request,
